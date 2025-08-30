@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie</title>
+</head>
+<body>
+    <script>
+        // 生命周期时间是由自己设置的 只在设置cookie过期时间有效
+        // 即使窗口或浏览器关闭也有效
+        // 把时间设置到之前的时间就过期了
+        // cookie要线上环境才有效
+        // localStorage,sesssionStorage不能超过5M
+        // cookie不能超过4K
+        // 不同的域名不能共享cookie
+        // 不同的浏览器存储的大小是不同的
+        var date=new Date();
+        var time=1000*60*60*24;
+        time=date.getTime()+time;
+        date.setTime(time)
+        document.cookie = 'name=佳佳'
+    </script>
+</body>
+</html>

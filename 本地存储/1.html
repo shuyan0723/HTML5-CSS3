@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+</head>
+<body>
+    <script>
+//         以前我们写的数据页面一刷新就没有了
+// H5新增了本地存储，存储数据的
+// 本地存储是什么？
+// 是个仓库，存放数据的
+// 数据存储在用户浏览器，变量也是小仓库，变量一刷新就没了但有些数据我不想丢失
+// 可以将数据永远存储在本地，除非手动删除，否则即使浏览器关闭也会存在
+
+// 特性：可以多窗口使用，同一浏览器可以共享
+// 以键值对的形式存储
+        // 存储数据
+         localStorage.setItem('name','张三')
+         localStorage.setItem('age',18)
+        // 获取数据
+        console.log(localStorage.getItem('name'));
+         // 删除本地存储 只删除名字 
+         localStorage.removeItem('name')
+         // 查看 通过application查看
+         localStorage.setItem('name','李四') // 存一个没有的key就是增
+         localStorage.setItem('isSingle',true) // 存一个有key的就是改
+         console.log(localStorage.getItem('isSingle'));
+        //  本地存储只能存字符串
+  </script>
+</body>
+</html>
