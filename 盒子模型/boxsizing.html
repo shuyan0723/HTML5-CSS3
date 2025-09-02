@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            padding: 20px;
+            border: solid 10px blue;
+            margin: 10px;
+        }
+        .box-boxsizing{
+           box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">标准盒模型</div><!-- 内容宽度=100px+20px*2+10px*2=160px 内容高度=100px+20px*2+10px*2=160px -->
+        <div class="box box-boxsizing">怪异盒模型</div><!-- 内容宽度=100px 内容高度=100px -->
+    </div>
+
+</body>
+</html>
